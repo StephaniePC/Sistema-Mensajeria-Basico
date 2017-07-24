@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  De: MyString
+  Para: MyString
+  Contenid: MyText
+
+two:
+  De: MyString
+  Para: MyString
+  Contenid: MyText

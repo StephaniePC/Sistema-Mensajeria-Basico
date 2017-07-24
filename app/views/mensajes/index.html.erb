@@ -1,0 +1,32 @@
+<meta name="viewport" content="width=device-width                , initial-scale=1.0" />
+
+<h1>Lista de mensajes</h1>
+<br>
+<%= form_tag(mensajes_path, method: :get) do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag 'Buscar', name: nil %>
+<% end %>
+ <%= link_to 'Nuevo mensaje',  new_mensaje_path %>
+<table>
+  <tr>
+    <th>De:</th>
+    <th>Para:</th>
+    <th>Contenido</th>
+    <th></th>
+    <th>Opciones</th>
+    <th></th>
+  </tr>
+ 
+  <% @mensajes.each do |mensajes| %>
+    <tr>
+      <td><%= mensajes.De %></td>
+      <td><%= mensajes.Para %></td>
+      <td><%= mensajes.Contenid %></td>
+      <td><%= link_to 'Mostrar', mensaje_path(mensajes) %></td>
+      <td><%= link_to 'Editar', edit_mensaje_path(mensajes) %></td>
+      <td><%= link_to 'Eliminar', mensaje_path(mensajes),
+              method: :delete,
+              data: { confirm: 'Esta seguro que desea borrar?' } %></td>
+    </tr>
+  <% end %>
+</table>

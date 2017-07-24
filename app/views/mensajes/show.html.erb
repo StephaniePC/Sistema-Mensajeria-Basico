@@ -1,0 +1,20 @@
+<table>
+<tr>
+
+ <th> <strong>De:</strong> </th>
+ <th> <strong>Para:</strong> </th>
+ <th><strong>Contenido:</strong> </th>
+ <th></th>
+
+</tr>
+<tr>
+
+ <td><%= @mensajes.De %></td>
+ <td><%= @mensajes.Para %></td>
+ <td><%= @mensajes.Contenid %></td>
+ <td><%= link_to 'Editar', edit_mensaje_path(@mensajes) %></td>
+</tr>	
+	
+
+
+<%= link_to 'Atrás', mensajes_path %>
