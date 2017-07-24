@@ -58,7 +58,3 @@ group :production do
   gem 'rails_12factor','0.0.2'
 end
 
-# Use SCSS for stylesheets
-gem 'bootstrap-sass', '~> 3.3.6'
-gem 'autoprefixer-rails'
-gem 'bootstrap_form'
